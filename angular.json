@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "99eb864a-227a-4dc1-8cfe-c3369c2c10a5"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -82,6 +85,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/farama-share/src/lib/styles"
+              ]
+            },
+            "extractCss": true,
             "outputPath": "dist/farama-shell",
             "index": "projects/farama-shell/src/index.html",
             "main": "projects/farama-shell/src/main.ts",
