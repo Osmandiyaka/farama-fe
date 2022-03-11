@@ -6,6 +6,16 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "paths": {
+      "farama-share": [
+        "dist/farama-share/farama-share",
+        "dist/farama-share"
+      ],
+      "farama-ui-share": [
+        "dist/farama-ui-share/farama-ui-share",
+        "dist/farama-ui-share"
+      ]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
