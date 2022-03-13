@@ -1,37 +1,41 @@
-// @import "/projects/farama-share/src/lib/styles/_variable.scss";
 @import "variable";
 *{
   margin: 0px;
   padding: 0px;
 }
 
-body{
-  padding: 0;
-  margin: 0 ;
-  border: 0;
-  min-height: 100vh;
+:root{
+  margin: 0;
 }
 
 
-.grid-container {
+.container{
+  height: 100vh;
   display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu main main main main main'
-    'menu footer footer footer footer footer';
-  grid-template-rows: 50px auto 50px;
-  // gap: 10px;
-  background-color: $mainContentColor;
-  height: 92vh;
+  width: 100vw;
+  grid-template-areas: "header header"
+                       "nav main"
+                       "nav footer";
+  grid-template-rows: 60px 1fr 40px;
+  grid-template-columns: 200px 1fr;
 }
 
-.header {
+header{
   grid-area: header;
   background-color: $secondaryColor;
 }
-.side-bar {
-  grid-area: menu;
-  background: $primaryColor;
+
+nav{
+  grid-area: nav;
+  background-color: $primaryColor;
 }
-.main { grid-area: main; }
-.footer { grid-area: footer; }
+
+main{
+  grid-area: main;
+  background-color: $mainContentColor;
+}
+
+footer{
+  grid-area: footer;
+  background-color: $secondaryColor;
+}
